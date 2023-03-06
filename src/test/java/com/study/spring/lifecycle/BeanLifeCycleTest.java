@@ -20,7 +20,8 @@ public class BeanLifeCycleTest {
     static class LifeCycleConfig {
         // destroyMethod의 경우 default 값은 close, shutdown 이기 때문에 생략 가능
         // @Bean(initMethod = "init")
-        @Bean(initMethod = "init", destroyMethod = "close")
+//        @Bean(initMethod = "init", destroyMethod = "close")
+        @Bean
         public NetworkClient networkClient() {
             NetworkClient networkClient = new NetworkClient();
             networkClient.setUrl("http://hello-spring.dev");
